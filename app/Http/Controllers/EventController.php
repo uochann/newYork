@@ -9,7 +9,6 @@ class EventController extends Controller
 {
     public function index()
     {
-        // $test = Event::table('');
         return view('event.index');
     }
 
