@@ -7,7 +7,7 @@ class EventAllFetch extends Component {
         events: [
         {
             id: 1,
-            title: "これは書き換えの文章です",
+            title: "これは書き換えの文章です！",
             body: "狐とたぬきの化かし合い"
         }
       ]

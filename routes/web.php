@@ -11,21 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes(); 
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/event', 'EventController@index')->name('index');
 
-Route::prefix('event')->group(function () {
-    Route::get('/', 'EventController@index')->name('index');
-    Route::get('/create', 'EventController@create')->name('create');
-    Route::post('/store', 'EventController@store')->name('store');
-    Route::get('/edit/{id}', 'EventController@edit')->name('edit');
-    Route::post('/update{id}', 'EventController@update')->name('update');
-    Route::post('/delete{id}', 'EventController@delete')->name('delete');
-    Route::get('/search', 'EventController@delete')->name('delete');
-});
 
