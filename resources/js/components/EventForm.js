@@ -60,14 +60,14 @@ const EventForm = () => {
   const unCreatable = title === '' || body === ''
     return (
         <>
-        <Box fontSize="h4.fontSize" textAlign="center" m={4}>
+        <Box fontSize="h4.fontSize" action="{{ route('store')}}" textAlign="center" m={4}>
         イベント作成フォーム
         </Box>
         <form className="classes.root" noValidate autoComplete="off">
           <TextField id="outlined-basic" label="タイトル" variant="outlined" id="formEventTitle"
-                  value={title} onChange={e => setTitle(e.target.value)} /><br/>
+                  value={title} onChange={e => setTitle(e.target.value)} name="title" /><br/>
           <TextField id="outlined-basic" label="ボディ" variant="outlined" id="formEventBody"
-                  value={body} onChange={e => setBody(e.target.value)} /><br/>
+                  value={body} onChange={e => setBody(e.target.value)} name="body" /><br/>
             <Box m={2}>
               <ButtonGroup disableElevation variant="contained" color="primary" >
                 <Button color="primary" variant="contained"  onClick={addEvent} disabled={unCreatable}>イベントを作成する</Button>

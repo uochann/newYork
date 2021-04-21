@@ -10,4 +10,9 @@ class EventController extends Controller
     {
         return view('index');
     }
+
+    public function store(Request $request)
+    {
+        // dd($request);
+    }
 }
